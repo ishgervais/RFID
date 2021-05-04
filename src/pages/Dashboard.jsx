@@ -13,7 +13,7 @@ return(
             <NavLink to="/delete/card" className="block p-2">Delete card</NavLink>
             <NavLink to="/view/cards" className="block p-2">View cards</NavLink>
         </div>
-        <div className="bg-white rounded shadow-lg my-3 p-5 text-sm">
+        <div className="bg-white rounded shadow-lg my-2 p-5 text-sm">
             <NavLink to="/balance/add" className="block p-2">Add balance</NavLink>
             <NavLink to="/balance/remove" className="block p-2">Remove balance</NavLink>
             <NavLink to="/balance/clear" className="block p-2">Clear card</NavLink>
