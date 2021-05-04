@@ -1,10 +1,22 @@
 .App {
   text-align: center;
 }
+body{
+  font-family: 'Poppins',sans-serif !important;
+}
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+a:hover{
+  background-color:#3b82f6;
+  color: #fff;
+}
+.active{
+  background-color:#3b82f6;
+  color: #fff;
 }
 
 @media (prefers-reduced-motion: no-preference) {
