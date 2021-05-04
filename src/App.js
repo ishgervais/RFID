@@ -16,6 +16,9 @@ function App() {
          <Route exact path="/view/cards">
         <ReadCards/>
        </Route>
+       <Route exact path="/">
+       <RegisterCard/>
+       </Route>
        <Route exact path="/create/card">
         <RegisterCard/>
        </Route>
