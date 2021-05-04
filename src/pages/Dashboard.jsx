@@ -2,7 +2,7 @@ import {NavLink} from 'react-router-dom';
 import cardLogo from '../images/cardLogo.png';
 export function Dashboard(props) {
 return(
-<div className="lg:flex lg:gap-5 lg:mx-16 items-center">
+<div className="lg:flex lg:gap-5 lg:mx-16 items-center h-screen">
     <div className="lg:w-1/4 h-screeen">
         <div className="text-lg font-bold text-blue-500 lg:float-left">RFID Control Panel</div>
         <div className="">
@@ -25,7 +25,7 @@ return(
 
     </div>
 
-    <div className="lg:w-3/4 bg-blue-500 lg:h-screen p-5 text-white">
+    <div className="lg:w-3/4 bg-blue-500 lg:h-screen px-5 py-2 text-white overflow-auto">
       {props.children}
     </div>
     <div className="bg-white rounded  my-3 p-5 text-xs sm:block ">
