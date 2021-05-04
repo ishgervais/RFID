@@ -22,7 +22,42 @@ export function ReadCards(){
               <div className="card bg-blue-500 p-5 text-xl text-white font-bold mb-5">RFID CONTROL PANEL</div>
          <div className="card--logs">
             {/* card one starts */}
-            {cards?.map((item)=>{
+            {loading ?
+            <>
+             
+                    <div className="bg-white rounded shadow-lg text-black p-5 my-4 lg:flex gap-5 w-full">
+                    <div className="lg:w-1/4 mb-2 card--code">
+                        <div className="title font-bold mb-3">CARD ID</div>
+                       
+                        <Skeleton height={25} width={Math.ceil((Math.random()+9)*9)+"%"}/>
+                  
+            
+                    </div>
+                    <div className="lg:w-1/4 mb-2 card--balance">
+                        <div className="title font-bold mb-3">CARD OWNER</div>
+                   
+                      
+                        <Skeleton height={25} width={Math.ceil((Math.random()+10)*9)+"%"}/>
+                   
+            
+                    </div>
+                    <div className="lg:w-1/4 mb-2">
+                        <div className="title font-bold mb-3">CARD BALANCE</div>
+                      
+                       
+                        <Skeleton height={25} width={Math.ceil((Math.random()+10)*9)+"%"}/>
+              
+                    </div>
+                    <div className="lg:w-1/4 mb-2">
+                        <div className="title font-bold mb-3">ACTION</div>
+                       Delete
+                    </div>
+    
+                </div>
+            </> 
+            :
+            <>
+             {cards?.map((item)=>{
                 return(
                     <div className="bg-white rounded shadow-lg text-black p-5 my-4 lg:flex gap-5 w-full">
                     <div className="lg:w-1/4 mb-2 card--code">
@@ -59,6 +94,7 @@ export function ReadCards(){
                 </div>
                 );
             })}
+            </>}
            
 
             {/* card ends here */}

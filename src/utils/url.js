@@ -1,1 +1,1 @@
-export default process.env.NODE_ENV === 'production'? 'http://localhost:4040': 'http://localhost:4040' 
+export default process.env.NODE_ENV === 'production'? 'https://rfid-gersh.herokuapp.com': 'https://rfid-gersh.herokuapp.com' 
