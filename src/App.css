@@ -1,8 +1,9 @@
 .App {
   text-align: center;
 }
-body{
-  font-family: 'Poppins',sans-serif !important;
+
+body {
+  font-family: 'Poppins', sans-serif !important;
 }
 
 .App-logo {
@@ -10,13 +11,29 @@ body{
   pointer-events: none;
 }
 
-a:hover{
-  background-color:#3b82f6;
+a:hover {
+  background-color: #3b82f6;
   color: #fff;
 }
-.active{
-  background-color:#3b82f6;
+
+.active {
+  background-color: #3b82f6;
   color: #fff;
+}
+
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: rgb(0, 102, 255);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: blue;
+  border-radius: 20px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -44,6 +61,7 @@ a:hover{
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
