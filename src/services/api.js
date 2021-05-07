@@ -10,8 +10,15 @@ const addCard = async(body)=>{
     const response = await axios.post(`${url}/api/cards`,body);
     return response.data;
 }
+const addTransaction = async(body)=>{
+    const response = await axios.post(`${url}/api/transactions`,body);
+    return response;
+}
+
+
 export{
     getAllCards,
-    addCard
+    addCard,
+    addTransaction
 
 }

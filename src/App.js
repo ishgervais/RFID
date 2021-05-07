@@ -6,6 +6,9 @@ import {Route,Switch} from 'react-router-dom'
 import { ReadCards } from './components/ReadCard';
 import { RegisterCard } from './components/RegisterCard';
 import { AddBalance } from './components/AddBalance';
+import { TransactionsLogs } from './components/TransactionsLogs';
+
+
 
 function App() {
   return (
@@ -22,8 +25,11 @@ function App() {
        <Route exact path="/create/card">
         <RegisterCard/>
        </Route>
-       <Route exact path="/balance/add">
+       <Route exact path="/balance/actions">
         <AddBalance/>
+       </Route>
+       <Route exact path="/balance/logs">
+        <TransactionsLogs/>
        </Route>
         </Switch>
        </Dashboard>

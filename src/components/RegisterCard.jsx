@@ -21,8 +21,6 @@ export function RegisterCard() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
-        console.log(uuid);
         try {
             let data = await addCard({
                 uuid: uuid,

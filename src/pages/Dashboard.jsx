@@ -11,7 +11,7 @@ export function Dashboard(props) {
                 </div>
                 <div className="bg-white rounded shadow-lg my-2 p-5 text-sm">
                     <NavLink to="/balance/logs" className="block p-2">Transaction logs</NavLink>
-                    <NavLink to="/balance/add" className="block p-2 my-2">Add balance</NavLink>
+                    <NavLink to="/balance/actions" className="block p-2 my-2">Deposit / remove</NavLink>
                 </div>
 
                 <div className="bg-white rounded shadow-lg p-5 text-sm">
