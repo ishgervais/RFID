@@ -33,10 +33,10 @@ export function TransactionsLogs() {
         }
     }, [])
 
-    console.log(cards);
+    // console.log(cards);
     return (
-        <div>
-            <div className="card bg-blue-500 p-5 text-xl text-white font-bold mb-5">RFID CONTROL PANEL</div>
+        <div className="transition duration-500 ease-in-out">
+            <div className="card bg-blue-500 p-5 text-xl text-white font-bold mb-5">RFID CONTROL PANEL | TRANSACTION LOGS</div>
             <div className="card--logs text-sm">
                 {/* card one starts */}
                 {loading ?
@@ -68,8 +68,10 @@ export function TransactionsLogs() {
                             <div className="lg:w-1/4 mb-2">
                                 <div className="title font-bold mb-3 gap-2">ACTION</div>
                                 <div className="flex gap-2 justify-center">
-                                    <span className="flex justify-center">   {icons.trash}</span>
-                                    <span className="flex justify-center">   {icons.add}</span>
+
+                                    <span className="flex justify-center">   {icons.eye}</span>
+                                    {/* <span className="flex justify-center">   {icons.trash}</span>
+                                    <span className="flex justify-center">   {icons.add}</span> */}
                                 </div>
                             </div>
 
@@ -85,8 +87,7 @@ export function TransactionsLogs() {
                                         {loading ?
                                             <Skeleton height={25} width={Math.ceil((Math.random() + 9) * 9) + "%"} />
                                             :
-                                            <> {item.transactions[0]?.uuid} </>
-                                        }
+                                            <> {item.transactions[0]?.uuid} </>}
                                     </div>
                                     <div className="lg:w-1/4 mb-2 card--balance">
                                         <div className="title font-bold mb-3">TRANSACTION FARE</div>
@@ -94,8 +95,7 @@ export function TransactionsLogs() {
                                         {loading ?
                                             <Skeleton height={25} width={Math.ceil((Math.random() + 10) * 9) + "%"} />
                                             :
-                                            <> {item.transactions_fare} </>
-                                        }
+                                            <> {item.transactions_fare} </>}
                                     </div>
                                     <div className="lg:w-1/4 mb-2">
                                         <div className="title font-bold mb-3">NEW BALANCE</div>
@@ -103,14 +103,15 @@ export function TransactionsLogs() {
                                         {loading ?
                                             <Skeleton height={25} width={Math.ceil((Math.random() + 10) * 9) + "%"} />
                                             :
-                                            <> {item.new_balance} </>
-                                        }
+                                            <> {item.new_balance} </>}
                                     </div>
                                     <div className="lg:w-1/4 mb-2">
                                         <div className="title font-bold mb-3">ACTION</div>
                                         <div className="flex gap-2 justify-center">
-                                            <span className="flex justify-center">   {icons.trash}</span>
-                                            <span className="flex justify-center">   {icons.add}</span>
+                                            <span className="flex justify-center">   {icons.eye}</span>
+                                            {/* <span className="flex justify-center">   {icons.trash}</span> */}
+                                            {/* <span className="flex justify-center">   {icons.add}</span>
+                                             */}
                                         </div>
 
                                     </div>

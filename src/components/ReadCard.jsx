@@ -62,8 +62,10 @@ export function ReadCards() {
                             <div className="lg:w-1/4 mb-2">
                                 <div className="title font-bold mb-3 gap-2">ACTION</div>
                                 <div className="flex gap-2 justify-center">
-                                    <span className="flex justify-center">   {icons.trash}</span>
-                                    <span className="flex justify-center">   {icons.add}</span>
+
+                                    <span className="flex justify-center">   {icons.eye}</span>
+                                    {/* <span className="flex justify-center">   {icons.trash}</span>
+                                    <span className="flex justify-center">   {icons.add}</span> */}
                                 </div>
                             </div>
 
@@ -88,7 +90,7 @@ export function ReadCards() {
                                         {loading ?
                                             <Skeleton height={25} width={Math.ceil((Math.random() + 10) * 9) + "%"} />
                                             :
-                                            <> {item.Owner} </>
+                                            <> ------ </>
                                         }
                                     </div>
                                     <div className="lg:w-1/4 mb-2">
@@ -103,8 +105,10 @@ export function ReadCards() {
                                     <div className="lg:w-1/4 mb-2">
                                         <div className="title font-bold mb-3">ACTION</div>
                                         <div className="flex gap-2 justify-center">
-                                            <span className="flex justify-center">   {icons.trash}</span>
-                                            <span className="flex justify-center">   {icons.add}</span>
+
+                                            <span className="flex justify-center">   {icons.eye}</span>
+                                            {/* <span className="flex justify-center">   {icons.trash}</span>
+                                            <span className="flex justify-center">   {icons.add}</span> */}
                                         </div>
 
                                     </div>
