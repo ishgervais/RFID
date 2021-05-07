@@ -20,7 +20,7 @@ function App() {
         <ReadCards/>
        </Route>
        <Route exact path="/">
-       <RegisterCard/>
+       <TransactionsLogs/>
        </Route>
        <Route exact path="/create/card">
         <RegisterCard/>

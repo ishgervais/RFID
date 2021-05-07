@@ -42,7 +42,7 @@ export function AddBalance() {
     }
 
     return <div className="text-black ">
-        <div className="card bg-blue-500 p-5 text-xl text-white font-bold mb-5">RFID CONTROL PANEL || ADD BALANCE</div>
+        <div className="card bg-blue-500 p-5 text-xl text-white font-bold mb-5">RFID CONTROL PANEL | CARD ACTIONS</div>
         <div className="lg:flex p-5">
             <div className="bg-white lg:w-1/2 p-5 flex items-center text-sm text-gray-400">
                 <div className="m-auto">

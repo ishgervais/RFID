@@ -38,7 +38,7 @@ export function RegisterCard() {
         }
     }
     return <div className="text-black ">
-        <div className="card bg-blue-500 p-5 text-xl text-white font-bold mb-5">RFID CONTROL PANEL || REGISTER CARD</div>
+        <div className="card bg-blue-500 p-5 text-xl text-white font-bold mb-5">RFID CONTROL PANEL | REGISTER CARD</div>
         <div className="lg:flex p-5">
             <div className="bg-white lg:w-1/2 p-5 flex items-center text-sm text-gray-400">
                 <div className="m-auto">
