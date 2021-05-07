@@ -4,6 +4,8 @@ import socketIOClient from "socket.io-client"
 // skeleton loader 
 import Skeleton from "react-loading-skeleton";
 import url from '../utils/url';
+import { icons } from '../utils/icons';
+
 export function ReadCards() {
     const [cards, setCards] = useState([])
     const [loading, setLoading] = useState(false);
@@ -57,9 +59,12 @@ export function ReadCards() {
 
                             </div>
                             <div className="lg:w-1/4 mb-2">
-                                <div className="title font-bold mb-3">ACTION</div>
-                       Delete
-                    </div>
+                                <div className="title font-bold mb-3 gap-2">ACTION</div>
+                                <div className="flex gap-2 justify-center">
+                                    <span className="flex justify-center">   {icons.trash}</span>
+                                    <span className="flex justify-center">   {icons.add}</span>
+                                </div>
+                            </div>
 
                         </div>
                     </>
@@ -96,8 +101,12 @@ export function ReadCards() {
                                     </div>
                                     <div className="lg:w-1/4 mb-2">
                                         <div className="title font-bold mb-3">ACTION</div>
-                       Delete
-                    </div>
+                                        <div className="flex gap-2 justify-center">
+                                            <span className="flex justify-center">   {icons.trash}</span>
+                                            <span className="flex justify-center">   {icons.add}</span>
+                                        </div>
+
+                                    </div>
 
                                 </div>
                             );
