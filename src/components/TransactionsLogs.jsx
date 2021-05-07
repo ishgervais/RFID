@@ -43,14 +43,14 @@ export function TransactionsLogs() {
                     <>
 
                         <div className="bg-white rounded shadow-lg text-black p-5 my-4 lg:flex gap-5 w-full">
-                            <div className="lg:w-1/4 mb-2 card--code">
+                            <div className="lg:w-1/5 mb-2 card--code">
                                 <div className="title font-bold mb-3">CARD ID</div>
 
                                 <Skeleton height={25} width={Math.ceil((Math.random() + 9) * 9) + "%"} />
 
 
                             </div>
-                            <div className="lg:w-1/4 mb-2 card--balance">
+                            <div className="lg:w-1/5 mb-2 card--balance">
                                 <div className="title font-bold mb-3">TRANSACTION FARE</div>
 
 
@@ -58,14 +58,22 @@ export function TransactionsLogs() {
 
 
                             </div>
-                            <div className="lg:w-1/4 mb-2">
+                            <div className="lg:w-1/5 mb-2 card--balance">
+                                <div className="title font-bold mb-3">TRANSACTION TYPE</div>
+
+
+                                <Skeleton height={25} width={Math.ceil((Math.random() + 10) * 9) + "%"} />
+
+
+                            </div>
+                            <div className="lg:w-1/5 mb-2">
                                 <div className="title font-bold mb-3">NEW BALANCE</div>
 
 
                                 <Skeleton height={25} width={Math.ceil((Math.random() + 10) * 9) + "%"} />
 
                             </div>
-                            <div className="lg:w-1/4 mb-2">
+                            <div className="lg:w-1/5 mb-2">
                                 <div className="title font-bold mb-3 gap-2">TIME</div>
                                 <Skeleton height={25} width={Math.ceil((Math.random() + 10) * 9) + "%"} />
                                 {/* <div className="flex gap-2 justify-center">
@@ -84,14 +92,14 @@ export function TransactionsLogs() {
                         {cards?.slice().reverse().map((item) => {
                             return (
                                 <div className="bg-white rounded shadow-lg text-black p-5 my-4 lg:flex gap-5 w-full">
-                                    <div className="lg:w-1/4 mb-2 card--code">
+                                    <div className="lg:w-1/5 mb-2 card--code">
                                         <div className="title font-bold mb-3">CARD ID</div>
                                         {loading ?
                                             <Skeleton height={25} width={Math.ceil((Math.random() + 9) * 9) + "%"} />
                                             :
                                             <> {item.transactions[0]?.uuid} </>}
                                     </div>
-                                    <div className="lg:w-1/4 mb-2 card--balance">
+                                    <div className="lg:w-1/5 mb-2 card--balance">
                                         <div className="title font-bold mb-3">TRANSACTION FARE</div>
 
                                         {loading ?
@@ -99,7 +107,16 @@ export function TransactionsLogs() {
                                             :
                                             <> {item.transactions_fare} </>}
                                     </div>
-                                    <div className="lg:w-1/4 mb-2">
+                                    <div className="lg:w-1/5 mb-2">
+                                        <div className="title font-bold mb-3">TRANSACTION TYPE</div>
+
+                                        {loading ?
+                                            <Skeleton height={25} width={Math.ceil((Math.random() + 10) * 9) + "%"} />
+                                            :
+                                            <> {item.transaction_type} </>}
+                                    </div>
+
+                                    <div className="lg:w-1/5 mb-2">
                                         <div className="title font-bold mb-3">NEW BALANCE</div>
 
                                         {loading ?
@@ -107,7 +124,7 @@ export function TransactionsLogs() {
                                             :
                                             <> {item.new_balance} </>}
                                     </div>
-                                    <div className="lg:w-1/4 mb-2">
+                                    <div className="lg:w-1/5 mb-2">
                                         <div className="title font-bold mb-3">TIME</div>
                                         <div className="flex gap-2 justify-center">
                                             {/* <span className="flex justify-center">   {icons.eye}</span> */}
