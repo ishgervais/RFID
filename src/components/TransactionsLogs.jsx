@@ -23,9 +23,14 @@ export function TransactionsLogs() {
         setLoading(true);
         const socket = socketIOClient(url);
         socket.on("Transactions", (data) => {
+            console.log(data)
             setCards(data);
             setLoading(false);
         })
+
+        return () => {
+            socket.disconnect()
+        }
     }, [])
 
     console.log(cards);
@@ -46,7 +51,7 @@ export function TransactionsLogs() {
 
                             </div>
                             <div className="lg:w-1/4 mb-2 card--balance">
-                                <div className="title font-bold mb-3">CARD OWNER</div>
+                                <div className="title font-bold mb-3">TRANSACTION FARE</div>
 
 
                                 <Skeleton height={25} width={Math.ceil((Math.random() + 10) * 9) + "%"} />
@@ -54,7 +59,7 @@ export function TransactionsLogs() {
 
                             </div>
                             <div className="lg:w-1/4 mb-2">
-                                <div className="title font-bold mb-3">CARD BALANCE</div>
+                                <div className="title font-bold mb-3">NEW BALANCE</div>
 
 
                                 <Skeleton height={25} width={Math.ceil((Math.random() + 10) * 9) + "%"} />
@@ -80,7 +85,7 @@ export function TransactionsLogs() {
                                         {loading ?
                                             <Skeleton height={25} width={Math.ceil((Math.random() + 9) * 9) + "%"} />
                                             :
-                                            <> {item.transactions?.uuid} </>
+                                            <> {item.transactions[0]?.uuid} </>
                                         }
                                     </div>
                                     <div className="lg:w-1/4 mb-2 card--balance">

@@ -10,15 +10,16 @@ export function ReadCards() {
     const [cards, setCards] = useState([])
     const [loading, setLoading] = useState(false);
 
-    // useEffect(()=>{
-    //     const data = async()=>{
+    // useEffect(() => {
+    //     const data = async () => {
     //         setLoading(true)
     //         const response = await getAllCards();
     //         setCards(response);
     //         setLoading(false)
     //     }
-    //   data();
-    // },[]);
+    //     data();
+    // }, []);
+    // websockets
     useEffect(() => {
         setLoading(true);
         const socket = socketIOClient(url);
