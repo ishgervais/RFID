@@ -44,14 +44,14 @@ export function TransactionsLogs() {
 
                         <div className="bg-white rounded shadow-lg text-black p-5 my-4 lg:flex gap-5 w-full">
                             <div className="lg:w-1/5 mb-2 card--code">
-                                <div className="title font-bold mb-3">CARD ID</div>
+                                <div className="title font-bold mb-3">IMEI</div>
 
                                 <Skeleton height={25} width={Math.ceil((Math.random() + 9) * 9) + "%"} />
 
 
                             </div>
                             <div className="lg:w-1/5 mb-2 card--balance">
-                                <div className="title font-bold mb-3">TRANSACTION FARE</div>
+                                <div className="title font-bold mb-3">SPECIFICATION</div>
 
 
                                 <Skeleton height={25} width={Math.ceil((Math.random() + 10) * 9) + "%"} />
@@ -59,7 +59,7 @@ export function TransactionsLogs() {
 
                             </div>
                             <div className="lg:w-1/5 mb-2 card--balance">
-                                <div className="title font-bold mb-3">TRANSACTION TYPE</div>
+                                <div className="title font-bold mb-3">OWNER</div>
 
 
                                 <Skeleton height={25} width={Math.ceil((Math.random() + 10) * 9) + "%"} />
@@ -67,7 +67,7 @@ export function TransactionsLogs() {
 
                             </div>
                             <div className="lg:w-1/5 mb-2">
-                                <div className="title font-bold mb-3">NEW BALANCE</div>
+                                <div className="title font-bold mb-3">COORDINATES</div>
 
 
                                 <Skeleton height={25} width={Math.ceil((Math.random() + 10) * 9) + "%"} />
@@ -93,36 +93,36 @@ export function TransactionsLogs() {
                             return (
                                 <div className="bg-white rounded shadow-lg text-black p-5 my-4 lg:flex gap-5 w-full">
                                     <div className="lg:w-1/5 mb-2 card--code">
-                                        <div className="title font-bold mb-3">CARD ID</div>
+                                        <div className="title font-bold mb-3">IMEI</div>
                                         {loading ?
                                             <Skeleton height={25} width={Math.ceil((Math.random() + 9) * 9) + "%"} />
                                             :
                                             <> {item.transactions[0]?.uuid} </>}
                                     </div>
                                     <div className="lg:w-1/5 mb-2 card--balance">
-                                        <div className="title font-bold mb-3">TRANSACTION FARE</div>
+                                        <div className="title font-bold mb-3">SPECIFICATION</div>
 
                                         {loading ?
                                             <Skeleton height={25} width={Math.ceil((Math.random() + 10) * 9) + "%"} />
                                             :
-                                            <> {item.transactions_fare} </>}
+                                            <> SAMSUNG </>}
                                     </div>
                                     <div className="lg:w-1/5 mb-2">
-                                        <div className="title font-bold mb-3">TRANSACTION TYPE</div>
+                                        <div className="title font-bold mb-3">OWNER</div>
 
                                         {loading ?
                                             <Skeleton height={25} width={Math.ceil((Math.random() + 10) * 9) + "%"} />
                                             :
-                                            <> {item.transaction_type} </>}
+                                            <> Herman Happy </>}
                                     </div>
 
                                     <div className="lg:w-1/5 mb-2">
-                                        <div className="title font-bold mb-3">NEW BALANCE</div>
+                                        <div className="title font-bold mb-3">COORDINATES</div>
 
                                         {loading ?
                                             <Skeleton height={25} width={Math.ceil((Math.random() + 10) * 9) + "%"} />
                                             :
-                                            <> {item.new_balance} </>}
+                                            <> 1.9441° S, 30.0619° E </>}
                                     </div>
                                     <div className="lg:w-1/5 mb-2">
                                         <div className="title font-bold mb-3">TIME</div>
