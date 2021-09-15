@@ -4,69 +4,85 @@ import socketIOClient from "socket.io-client"
 // skeleton loader 
 import Skeleton from "react-loading-skeleton";
 import url from '../utils/url';
-import { icons } from '../utils/icons';
+// import { icons } from '../utils/icons';
 
 export function TransactionsLogs() {
     const [cards, setCards] = useState([])
     const [loading, setLoading] = useState(false);
 
-    // useEffect(() => {
-    //     const data = async () => {
-    //         setLoading(true)
+    // useEffect(()=>{
+    //     const data = async()=>{
+    //         setLoading(true)a
     //         const response = await getAllCards();
     //         setCards(response);
     //         setLoading(false)
     //     }
-    //     data();
-    // }, []);
-    // websockets
+    //   data();
+    // },[]);
     useEffect(() => {
         setLoading(true);
         const socket = socketIOClient(url);
-        socket.on("Cards", (data) => {
+        socket.on("Transactions", (data) => {
+            console.log(data)
             setCards(data);
             setLoading(false);
         })
+
+        return () => {
+            socket.disconnect()
+        }
     }, [])
+
+    // console.log(cards);
     return (
-        <div>
-            <div className="card bg-blue-500 p-5 text-xl text-white font-bold mb-5">P-TRACK</div>
+        <div className="transition duration-500 ease-in-out">
+            <div className="card bg-blue-500 p-5 text-xl text-white font-bold mb-5">P-TRACK | Live location</div>
             <div className="card--logs text-sm">
                 {/* card one starts */}
                 {loading ?
                     <>
 
                         <div className="bg-white rounded shadow-lg text-black p-5 my-4 lg:flex gap-5 w-full">
-                            <div className="lg:w-1/4 mb-2 card--code">
-                                <div className="title font-bold mb-3">CARD ID</div>
+                            <div className="lg:w-1/5 mb-2 card--code">
+                                <div className="title font-bold mb-3">IMEI</div>
 
                                 <Skeleton height={25} width={Math.ceil((Math.random() + 9) * 9) + "%"} />
 
 
                             </div>
-                            <div className="lg:w-1/4 mb-2 card--balance">
-                                <div className="title font-bold mb-3">CARD OWNER</div>
+                            <div className="lg:w-1/5 mb-2 card--balance">
+                                <div className="title font-bold mb-3">SPECIFICATION</div>
 
 
                                 <Skeleton height={25} width={Math.ceil((Math.random() + 10) * 9) + "%"} />
 
 
                             </div>
-                            <div className="lg:w-1/4 mb-2">
-                                <div className="title font-bold mb-3">CARD BALANCE</div>
+                            <div className="lg:w-1/5 mb-2 card--balance">
+                                <div className="title font-bold mb-3">OWNER</div>
+
+
+                                <Skeleton height={25} width={Math.ceil((Math.random() + 10) * 9) + "%"} />
+
+
+                            </div>
+                            <div className="lg:w-1/5 mb-2">
+                                <div className="title font-bold mb-3">COORDINATES</div>
 
 
                                 <Skeleton height={25} width={Math.ceil((Math.random() + 10) * 9) + "%"} />
 
                             </div>
-                            <div className="lg:w-1/4 mb-2">
-                                <div className="title font-bold mb-3 gap-2">ACTION</div>
-                                <div className="flex gap-2 justify-center">
+                            <div className="lg:w-1/5 mb-2">
+                                <div className="title font-bold mb-3 gap-2">TIME</div>
+                                <Skeleton height={25} width={Math.ceil((Math.random() + 10) * 9) + "%"} />
+                                {/* <div className="flex gap-2 justify-center">
+                                    <Skeleton height={25} width={Math.ceil((Math.random() + 10) * 9) + "%"} /> */}
 
-                                    <span className="flex justify-center">   {icons.eye}</span>
-                                    {/* <span className="flex justify-center">   {icons.trash}</span>
+                                {/* <span className="flex justify-center">   {icons.eye}</span> */}
+                                {/* <span className="flex justify-center">   {icons.trash}</span>
                                     <span className="flex justify-center">   {icons.add}</span> */}
-                                </div>
+                                {/* </div> */}
                             </div>
 
                         </div>
@@ -76,42 +92,51 @@ export function TransactionsLogs() {
                         {cards?.slice().reverse().map((item) => {
                             return (
                                 <div className="bg-white rounded shadow-lg text-black p-5 my-4 lg:flex gap-5 w-full">
-                                    <div className="lg:w-1/4 mb-2 card--code">
-                                        <div className="title font-bold mb-3">CARD ID</div>
+                                    <div className="lg:w-1/5 mb-2 card--code">
+                                        <div className="title font-bold mb-3">IMEI</div>
                                         {loading ?
                                             <Skeleton height={25} width={Math.ceil((Math.random() + 9) * 9) + "%"} />
                                             :
-                                            <> {item.uuid} </>
-                                        }
+                                            <> {item.transactions[0]?.uuid} </>}
                                     </div>
-                                    <div className="lg:w-1/4 mb-2 card--balance">
-                                        <div className="title font-bold mb-3">CARD OWNER</div>
+                                    <div className="lg:w-1/5 mb-2 card--balance">
+                                        <div className="title font-bold mb-3">SPECIFICATION</div>
 
                                         {loading ?
                                             <Skeleton height={25} width={Math.ceil((Math.random() + 10) * 9) + "%"} />
                                             :
-                                            <> ------ </>
-                                        }
+                                            <> SAMSUNG </>}
                                     </div>
-                                    <div className="lg:w-1/4 mb-2">
-                                        <div className="title font-bold mb-3">CARD BALANCE</div>
+                                    <div className="lg:w-1/5 mb-2">
+                                        <div className="title font-bold mb-3">OWNER</div>
 
                                         {loading ?
                                             <Skeleton height={25} width={Math.ceil((Math.random() + 10) * 9) + "%"} />
                                             :
-                                            <> {item.current_balance} </>
-                                        }
+                                            <> Herman Happy </>}
                                     </div>
-                                    <div className="lg:w-1/4 mb-2">
-                                        <div className="title font-bold mb-3">ACTION</div>
+
+                                    <div className="lg:w-1/5 mb-2">
+                                        <div className="title font-bold mb-3">COORDINATES</div>
+
+                                        {loading ?
+                                            <Skeleton height={25} width={Math.ceil((Math.random() + 10) * 9) + "%"} />
+                                            :
+                                            <> 1.9441° S, 30.0619° E </>}
+                                    </div>
+                                    <div className="lg:w-1/5 mb-2">
+                                        <div className="title font-bold mb-3">TIME</div>
                                         <div className="flex gap-2 justify-center">
+                                            {/* <span className="flex justify-center">   {icons.eye}</span> */}
 
-                                            <span className="flex justify-center">   {icons.eye}</span>
-                                            {/* <span className="flex justify-center">   {icons.trash}</span>
-                                            <span className="flex justify-center">   {icons.add}</span> */}
+                                            <span className="flex justify-center">   {item.createdAt}</span>
+                                            {/* <span className="flex justify-center">   {icons.trash}</span> */}
+                                            {/* <span className="flex justify-center">   {icons.add}</span>
+                                             */}
                                         </div>
 
                                     </div>
+
 
                                 </div>
                             );
