@@ -30,7 +30,7 @@ export function ReadCards() {
     }, [])
     return (
         <div>
-            <div className="card bg-blue-500 p-5 text-xl text-white font-bold mb-5">RFID CONTROL PANEL | ALL CARDS</div>
+            <div className="card bg-blue-500 p-5 text-xl text-white font-bold mb-5">P-TRACK</div>
             <div className="card--logs text-sm">
                 {/* card one starts */}
                 {loading ?
