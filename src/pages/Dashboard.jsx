@@ -7,7 +7,7 @@ export function Dashboard(props) {
                 <div className="text-lg font-bold text-blue-500">P-Track</div>
 
                 <div className="">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127599.77736554432!2d30.065733447199737!3d-1.9562284705543516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dca6f46d387275%3A0x7b8b917a7206d1e2!2sKigali%20Convention%20Centre!5e0!3m2!1sen!2srw!4v1631734766475!5m2!1sen!2srw" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127599.77736554432!2d30.065733447199737!3d-1.9562284705543516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dca6f46d387275%3A0x7b8b917a7206d1e2!2sKigali%20Convention%20Centre!5e0!3m2!1sen!2srw!4v1631734766475!5m2!1sen!2srw" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"/>
                 </div>
                 <div className="bg-white rounded shadow-lg my-2 p-5 text-sm">
                     <NavLink to="/balance/logs" className="block p-2">Live Location</NavLink>
