@@ -4,20 +4,20 @@ export function Dashboard(props) {
     return (
         <div className="lg:flex lg:gap-5 lg:mx-16 items-center h-screen">
             <div className="lg:w-1/4 h-screeen">
-                <div className="text-lg font-bold text-blue-500">RFID ~ Card Control Panel</div>
+                <div className="text-lg font-bold text-blue-500">P-Track</div>
 
                 <div className="">
                     <img src={cardLogo} alt="" />
                 </div>
                 <div className="bg-white rounded shadow-lg my-2 p-5 text-sm">
-                    <NavLink to="/balance/logs" className="block p-2">Transaction logs</NavLink>
-                    <NavLink to="/balance/actions" className="block p-2 my-2">Deposit / remove</NavLink>
+                    <NavLink to="/balance/logs" className="block p-2">Live location</NavLink>
+                    <NavLink to="/balance/actions" className="block p-2 my-2">Delete / Lock device</NavLink>
                 </div>
 
                 <div className="bg-white rounded shadow-lg p-5 text-sm">
-                    <NavLink to="/create/card" className="block p-2" activeClassName="active">Register card</NavLink>
+                    <NavLink to="/create/card" className="block p-2" activeClassName="active">Register device</NavLink>
                     {/* <NavLink to="/delete/card" className="block p-2">Delete card</NavLink> */}
-                    <NavLink to="/view/cards" className="block p-2 my-2">View cards</NavLink>
+                    <NavLink to="/view/cards" className="block p-2 my-2">View devices</NavLink>
                 </div>
 
                 {/* <div className="bg-white rounded  my-3 p-5 text-xs lg:block sm:hidden  ">
@@ -31,7 +31,7 @@ export function Dashboard(props) {
                 {props.children}
             </div>
             <div className="bg-white rounded  my-3 p-5 text-xs sm:block ">
-                &copy; 2021 ~ Dev. Gervais <br /> gervais@gurafy.com
+                &copy; 2021 ~ Propiquinty Solutions
         </div>
         </div>
     );
