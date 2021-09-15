@@ -36,7 +36,7 @@ export function TransactionsLogs() {
     // console.log(cards);
     return (
         <div className="transition duration-500 ease-in-out">
-            <div className="card bg-blue-500 p-5 text-xl text-white font-bold mb-5">RFID CONTROL PANEL | TRANSACTION LOGS</div>
+            <div className="card bg-blue-500 p-5 text-xl text-white font-bold mb-5">P-TRACK | Live location</div>
             <div className="card--logs text-sm">
                 {/* card one starts */}
                 {loading ?
